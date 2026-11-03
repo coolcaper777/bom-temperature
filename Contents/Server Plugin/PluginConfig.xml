@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<PluginConfig>
+    <Field id="ftpServer" type="textfield">
+        <Label>FTP Server:</Label>
+        <Default>ftp.bom.gov.au</Default>
+    </Field>
+</PluginConfig>

@@ -1,0 +1,72 @@
+<Devices>
+    <Device id="bomTemperatureSensor" typeId="bomTemperatureSensor" type="custom">
+        <Name>BoM Temperature Sensor</Name>
+        <ConfigUI>
+            <Field id="productId" type="textfield">
+                <Label>Product ID (e.g., IDW14199):</Label>
+            </Field>
+            <Field id="location" type="textfield">
+                <Label>Location (e.g., Perth):</Label>
+            </Field>
+            <Field id="updateInterval" type="textfield" defaultValue="60">
+                <Label>Update Interval (minutes):</Label>
+            </Field>
+        </ConfigUI>
+        <States>
+            <State id="state">
+                <ValueType>
+                    <List defaultValue="Preparing">
+                        <Option value="Preparing">Preparing</Option>
+                        <Option value="Ready">Ready</Option>
+                        <Option value="Unavailable">Unavailable</Option>
+                    </List>
+                </ValueType>
+                <TriggerLabel>Device State</TriggerLabel>
+                <ControlPageLabel>State</ControlPageLabel>
+            </State>
+            <State id="temperature">
+                <ValueType>Float</ValueType>
+                <TriggerLabel>Temperature</TriggerLabel>
+                <ControlPageLabel>Temperature</ControlPageLabel>
+                <Description>Forecast maximum temperature (°C)</Description>
+            </State>
+            <State id="temperatureDisplay">
+                <ValueType>String</ValueType>
+                <TriggerLabel>Temperature Display</TriggerLabel>
+                <ControlPageLabel>Temperature Display</ControlPageLabel>
+                <Description>Formatted temperature for display (°C)</Description>
+            </State>
+            <State id="lastUpdated">
+                <ValueType>String</ValueType>
+                <TriggerLabel>Last Updated</TriggerLabel>
+                <ControlPageLabel>Last Updated</ControlPageLabel>
+                <Description>Time of last data update</Description>
+            </State>
+            <State id="xmlIssueTime">
+                <ValueType>String</ValueType>
+                <TriggerLabel>XML Issue Time</TriggerLabel>
+                <ControlPageLabel>XML Issue Time</ControlPageLabel>
+                <Description>Time when the XML file was issued</Description>
+            </State>
+            <State id="lastUpdateCheck">
+                <ValueType>String</ValueType>
+                <TriggerLabel>Last Update Check</TriggerLabel>
+                <ControlPageLabel>Last Update Check</ControlPageLabel>
+                <Description>Time when the update interval was last checked</Description>
+            </State>
+            <State id="forecastPeriodDate">
+                <ValueType>String</ValueType>
+                <TriggerLabel>Forecast Period Date</TriggerLabel>
+                <ControlPageLabel>Forecast Period Date</ControlPageLabel>
+                <Description>Date of the forecast period for the temperature</Description>
+            </State>
+            <State id="weatherCondition">
+                <ValueType>String</ValueType>
+                <TriggerLabel>Weather Condition</TriggerLabel>
+                <ControlPageLabel>Weather Condition</ControlPageLabel>
+                <Description>Weather condition description (e.g., Mostly sunny)</Description>
+            </State>
+        </States>
+        <UiDisplayStateId>temperatureDisplay</UiDisplayStateId>
+    </Device>
+</Devices>

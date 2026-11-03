@@ -1,0 +1,9 @@
+<Actions>
+    <Action id="updateData" typeId="update_data">
+        <Name>Update Data</Name>
+        <CallbackMethod>update_data</CallbackMethod>
+        <ConfigUI>
+            <Description>Fetch updated values for this location and update device state accordingly.</Description>
+        </ConfigUI>
+    </Action>
+</Actions>
